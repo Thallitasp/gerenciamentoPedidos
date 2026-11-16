@@ -9,10 +9,10 @@ public class Produto {
 
     public Produto(String codigo, String nome, double preco) throws DadosInvalidosException {
         if (codigo == null || codigo.isBlank()) {
-            throw new DadosInvalidosException("O código do produto não pode ser vazio.");
+            throw new DadosInvalidosException("O codigo do produto nao pode ser vazio.");
         }
         if (preco <= 0) {
-            throw new DadosInvalidosException("O preço do produto deve ser maior que zero.");
+            throw new DadosInvalidosException("O preco do produto deve ser maior que zero.");
         }
         this.codigo = codigo;
         this.nome = nome;

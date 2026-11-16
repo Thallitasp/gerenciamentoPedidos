@@ -12,29 +12,29 @@ public class Main {
 
         service.exibirCategorias();
 
-        System.out.println("\n=== 1. CADASTRO DE PRODUTOS (COLEÇÕES + EXCEÇÕES) ===");
+        System.out.println("\n=== 1. CADASTRO DE PRODUTOS (COLECOES + EXCECOES) ===");
         
         try {
 
-            Produto p1 = new Produto("P01", "Teclado Mecânico", 350.00);
+            Produto p1 = new Produto("P01", "Teclado Mecanico", 350.00);
             Produto p2 = new Produto("P02", "Clean Code - Livro", 120.00);
 
             service.cadastrarProduto(p1);
             service.cadastrarProduto(p2);
 
-            System.out.println("Produtos válidos cadastrados com sucesso!");
+            System.out.println("Produtos validos cadastrados com sucesso!");
 
             Produto pInvalido = new Produto("P03", "Mouse sem fio", -50.00);
             
             service.cadastrarProduto(pInvalido);
 
         } catch (DadosInvalidosException e) {
-            System.err.println("[Erro de Validação]: " + e.getMessage());
+            System.err.println("[Erro de Validacao]: " + e.getMessage());
         } finally {
             System.out.println("Bloco finally executado: etapa de cadastro finalizada.");
         }
 
-        System.out.println("\n=== 2. CONSULTA RÁPIDA NO MAPA ===");
+        System.out.println("\n=== 2. CONSULTA RAPIDA NO MAPA ===");
 
         try {
 

@@ -11,7 +11,7 @@ import src.model.Produto;
 
 public class CatalogoService {
 
-    private final String[] categoriasPermitidas = {"Eletrônicos", "Livros", "Periféricos"};
+    private final String[] categoriasPermitidas = {"Eletronicos", "Livros", "Perifericos"};
 
     private List<Produto> historicoAdicoes = new ArrayList<>();
     private Map<String, Produto> catalogoPorCodigo = new HashMap<>();
@@ -29,7 +29,7 @@ public class CatalogoService {
     public void cadastrarProduto(Produto produto) {
 
         if (!codigosRegistrados.add(produto.getCodigo())) {
-            System.out.println("Aviso: Produto com código " + produto.getCodigo() + " já existe e será atualizado.");
+            System.out.println("Aviso: Produto com codigo " + produto.getCodigo() + " ja existe e sera atualizado.");
         }
 
         historicoAdicoes.add(produto);
@@ -40,7 +40,7 @@ public class CatalogoService {
 
         Produto produto = catalogoPorCodigo.get(codigo);
         if (produto == null) {
-            throw new ProdutoNaoEncontradoException("Produto não encontrado para o código: " + codigo);
+            throw new ProdutoNaoEncontradoException("Produto nao encontrado para o codigo: " + codigo);
         }
         return produto;
     }
